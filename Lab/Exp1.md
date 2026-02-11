@@ -1,6 +1,6 @@
 # **Lab Manual – Experiment 1**
 
-#Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
+Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
 ---
 **Name:** Krrish Batra
@@ -9,7 +9,7 @@
 
 **Batch:** 2
 
-**Specialisation:** Cloud Computing
+**Specialisation:** Cloud Computing and Virtualization Technology
 
 ---
 
@@ -382,3 +382,4 @@ Virtual Machines are suitable for full OS isolation and legacy workloads, wherea
 3. Docker Official Documentation - https://docs.docker.com/
 
 ---
+
