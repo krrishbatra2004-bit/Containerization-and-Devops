@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 ```
-![VirtualBox Installation] (Lab/Exp1/images/Screenshot-1.png)
+![VirtualBox Installation] (./Exp1/images/Screenshot-1.png)
 ```
 
 ---
@@ -378,5 +378,6 @@ Virtual Machines are suitable for full OS isolation and legacy workloads, wherea
 3. Docker Official Documentation - https://docs.docker.com/
 
 ---
+
 
 
