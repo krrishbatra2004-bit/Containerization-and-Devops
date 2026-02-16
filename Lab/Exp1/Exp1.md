@@ -1,4 +1,4 @@
-# **Lab Manual – Experiment 1**
+# **Lab 1**
 
 Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
@@ -65,9 +65,8 @@ Containers virtualize at the operating system level. They share the host OS kern
 2. Run the installer and keep default options.
 3. Restart the system if prompted.
 
-```
-![Oracle VM VirtualBox 7.0.22 Setup](./images/Screenshot-1.png)
-```
+
+![VirtualBox](./images/screenshot1.png)
 
 ---
 
@@ -80,10 +79,8 @@ Containers virtualize at the operating system level. They share the host OS kern
    ```bash
    vagrant --version
    ```
-
-```
+   
 ![Vagrant version](./images/Screenshot-2.png)
-```
 
 ---
 
@@ -108,24 +105,17 @@ Containers virtualize at the operating system level. They share the host OS kern
    vagrant up
    ```
 
-**Screenshot 3:** Vagrant Up Process
+   ![Vagrant Up Process](./images/Screenshot-3.png)
 
-```
-[INSERT SCREENSHOT: Terminal showing vagrant up command and VM creation]
-```
-
-1. Access the VM:
+   ![VM Booted and Ready](./images/Screenshot-4.png)
+   
+4. Access the VM:
 
    ```bash
    vagrant ssh
    ```
-
-**Screenshot 4:** SSH into VM
-
-```
-[INSERT SCREENSHOT: Successfully connected to VM via SSH]
-```
-
+   ![SSH to Ubuntu VM](./images/Screenshot-5.png)
+    
 ---
 
 ### **Step 4: Install Nginx inside VM**
@@ -135,12 +125,7 @@ sudo apt update
 sudo apt install -y nginx
 sudo systemctl start nginx
 ```
-
-**Screenshot 5:** Nginx Installation in VM
-
-```
-[INSERT SCREENSHOT: Nginx installation process and completion]
-```
+![Install nginx in VM](./images/Screenshot-6.png)
 
 ---
 
@@ -149,14 +134,8 @@ sudo systemctl start nginx
 ```bash
 curl localhost
 ```
-
-**Screenshot 6:** Nginx Verification in VM
-
-```
-[INSERT SCREENSHOT: curl output showing Nginx welcome page HTML]
-```
-
 ---
+![Verify nginx](./images/Screenshot-7.png)
 
 ### **Step 6: Stop and Remove VM**
 
@@ -371,12 +350,7 @@ Container:
 
 Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
 
-## **References**
-
-1. VirtualBox Documentation - https://www.virtualbox.org/manual/
-2. Vagrant Documentation - https://www.vagrantup.com/docs
-3. Docker Official Documentation - https://docs.docker.com/
-
 ---
+
 
 
