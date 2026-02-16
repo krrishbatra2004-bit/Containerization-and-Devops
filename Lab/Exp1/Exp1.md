@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 ```
-![Oracle VM VirtualBox 7.0.22 Setup Wizard welcome screen with installation instructions and Next/Cancel buttons](./images/Screenshot-1.png)
+![Oracle VM VirtualBox 7.0.22 Setup](./images/Screenshot-1.png)
 ```
 
 ---
@@ -378,4 +378,5 @@ Virtual Machines are suitable for full OS isolation and legacy workloads, wherea
 3. Docker Official Documentation - https://docs.docker.com/
 
 ---
+
 
