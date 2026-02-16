@@ -65,10 +65,8 @@ Containers virtualize at the operating system level. They share the host OS kern
 2. Run the installer and keep default options.
 3. Restart the system if prompted.
 
-**Screenshot 1:** VirtualBox Installation
-
 ```
-[INSERT SCREENSHOT: VirtualBox installation completed]
+![VirtualBox Installation](./images/Screenshot-1.png)
 ```
 
 ---
@@ -83,10 +81,8 @@ Containers virtualize at the operating system level. They share the host OS kern
    vagrant --version
    ```
 
-**Screenshot 2:** Vagrant Version Check
-
 ```
-[INSERT SCREENSHOT: Terminal showing vagrant version output]
+![Vagrant version](.images\Screenshot-2.png)
 ```
 
 ---
