@@ -1,4 +1,4 @@
-# **Lab 1**
+# **Lab Manual – Experiment 1**
 
 Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 ```
-![VirtualBox Installation] (./Exp1/images/Screenshot-1.png)
+![VirtualBox Installation](./Lab/Exp1/images/Screenshot-1.png)
 ```
 
 ---
@@ -82,7 +82,7 @@ Containers virtualize at the operating system level. They share the host OS kern
    ```
 
 ```
-![Vagrant version] (Lab/Exp1/images/Screenshot-2.png)
+![Vagrant version](./Lab/Exp1/images/Screenshot-2.png)
 ```
 
 ---
@@ -111,7 +111,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 **Screenshot 3:** Vagrant Up Process
 
 ```
-[INSERT SCREENSHOT:Terminal showing vagrant up command and VM creation]
+[INSERT SCREENSHOT: Terminal showing vagrant up command and VM creation]
 ```
 
 1. Access the VM:
@@ -378,6 +378,4 @@ Virtual Machines are suitable for full OS isolation and legacy workloads, wherea
 3. Docker Official Documentation - https://docs.docker.com/
 
 ---
-
-
 
