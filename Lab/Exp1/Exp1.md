@@ -17,9 +17,9 @@ Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
 ### **Hardware**
 
-* 64-bit system with virtualization support enabled in BIOS
-* Minimum 8 GB RAM (4 GB minimum acceptable)
-* Internet Connection
+* 64-bit system with virtualization support enabled in BIOS.
+* Minimum 8 GB RAM (4 GB minimum acceptable).
+* Internet Connection.
 
 ### **Software (Windows Host)**
 
@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 
-![VirtualBox](./images/screenshot1.png)
+![VirtualBox](./images/Screenshot-1.png)
 
 ---
 
@@ -114,7 +114,7 @@ Containers virtualize at the operating system level. They share the host OS kern
    ```bash
    vagrant ssh
    ```
-   ![SSH to Ubuntu VM](./images/Screenshot-5.png)
+   ![SSH Ubuntu VM](./images/Screenshot-5.png)
     
 ---
 
@@ -143,12 +143,7 @@ curl localhost
 vagrant halt
 vagrant destroy
 ```
-
-**Screenshot 7:** VM Cleanup
-
-```
-[INSERT SCREENSHOT: Vagrant halt and destroy commands]
-```
+VM Cleanup
 
 ---
 
@@ -162,26 +157,12 @@ wsl --install
 
 Reboot the system after installation.
 
-**Screenshot 8:** WSL Installation
-
-```
-[INSERT SCREENSHOT: PowerShell showing WSL installation]
-```
-
----
-
 ### **Step 2: Install Ubuntu on WSL**
 
 ```powershell
 wsl --install -d Ubuntu
 ```
-
-**Screenshot 9:** Ubuntu on WSL Setup
-
-```
 [INSERT SCREENSHOT: Ubuntu installation on WSL]
-```
-
 ---
 
 ### **Step 3: Install Docker Engine inside WSL**
@@ -195,17 +176,14 @@ sudo usermod -aG docker $USER
 
 Logout and login again to apply group changes.
 
-**Screenshot 10:** Docker Installation in WSL
-
-```
+Docker Installation in WSL
 [INSERT SCREENSHOT: Docker installation process]
-```
 
-**Screenshot 11:** Docker Version Check
+Docker Version Check
 
-```
+
 [INSERT SCREENSHOT: docker --version output]
-```
+
 
 ---
 
@@ -216,18 +194,13 @@ docker pull ubuntu
 
 docker run -d -p 8080:80 --name nginx-container nginx
 ```
+Docker Pull and Run
 
-**Screenshot 12:** Docker Pull and Run
-
-```
 [INSERT SCREENSHOT: Docker pull nginx and docker run command]
-```
 
-**Screenshot 13:** Container Running Status
+Container Running Status
 
-```
 [INSERT SCREENSHOT: docker ps showing nginx-container running]
-```
 
 ---
 
@@ -236,8 +209,7 @@ docker run -d -p 8080:80 --name nginx-container nginx
 ```bash
 curl localhost:8080
 ```
-
-**Screenshot 14:** Nginx Verification in Container
+Nginx Verification in Container
 
 ```
 [INSERT SCREENSHOT: curl output showing Nginx welcome page from container]
@@ -254,18 +226,13 @@ free -h
 htop
 systemd-analyze
 ```
+VM Resource Usage
 
-**Screenshot 15:** VM Resource Usage
-
-```
 [INSERT SCREENSHOT: free -h output in VM]
-```
 
-**Screenshot 16:** VM Boot Time Analysis
+VM Boot Time Analysis
 
-```
 [INSERT SCREENSHOT: systemd-analyze output]
-```
 
 ---
 
@@ -275,22 +242,17 @@ systemd-analyze
 docker stats
 free -h
 ```
+Container Resource Usage
 
-**Screenshot 17:** Container Resource Usage
-
-```
 [INSERT SCREENSHOT: docker stats output]
-```
 
-**Screenshot 18:** Host System Resource Usage
+Host System Resource Usage
 
-```
 [INSERT SCREENSHOT: free -h output on host with container running]
-```
 
 ---
 
-### **Parameters to Compare**
+### **Parameters to Compare and Observations**
 
 | Parameter    | Virtual Machine | Container |
 | ------------ | --------------- | --------- |
@@ -299,32 +261,6 @@ free -h
 | CPU Overhead | Higher          | Minimal   |
 | Disk Usage   | Larger          | Smaller   |
 | Isolation    | Strong          | Moderate  |
-
-**Screenshot 19:** Resource Comparison Chart
-
----
-
-## **Observations**
-
-### **Virtual Machine Observations:**
-
-```
-[INSERT YOUR OBSERVATIONS]
-- Boot time: ___ seconds
-- RAM usage: ___ MB
-- Disk space: ___ GB
-- CPU usage: ___% 
-```
-
-### **Container Observations:**
-
-```
-[INSERT YOUR OBSERVATIONS]
-- Startup time: ___ seconds
-- RAM usage: ___ MB
-- Disk space: ___ MB
-- CPU usage: ___%
-```
 
 ---
 
@@ -342,8 +278,6 @@ Container:
 * Resource overhead: Minimal
 * Isolation: Good
 
-
-
 ---
 
 ## **Conclusion**
@@ -351,6 +285,7 @@ Container:
 Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
 
 ---
+
 
 
 
