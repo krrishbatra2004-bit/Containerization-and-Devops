@@ -68,7 +68,6 @@ Containers virtualize at the operating system level. They share the host OS kern
 
 ![VirtualBox](./images/Screenshot-1.png)
 
----
 
 ### **Step 2: Install Vagrant**
 
@@ -255,4 +254,5 @@ Container:
 Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
 
 ---
+
 
