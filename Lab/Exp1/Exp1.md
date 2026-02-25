@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 
-![VirtualBox](./images/screenshot1.png)
+![VirtualBox](./images/Screenshot-1.png)
 
 ---
 
@@ -255,3 +255,4 @@ Container:
 Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
 
 ---
+
