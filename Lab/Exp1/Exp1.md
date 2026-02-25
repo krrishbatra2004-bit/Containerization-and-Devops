@@ -17,9 +17,9 @@ Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
 ### **Hardware**
 
-* 64-bit system with virtualization support enabled in BIOS.
-* Minimum 8 GB RAM (4 GB minimum acceptable).
-* Internet Connection.
+* 64-bit system with virtualization support enabled in BIOS
+* Minimum 8 GB RAM (4 GB minimum acceptable)
+* Internet Connection
 
 ### **Software (Windows Host)**
 
@@ -66,7 +66,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 3. Restart the system if prompted.
 
 
-![VirtualBox](./images/Screenshot-1.png)
+![VirtualBox](./images/screenshot1.png)
 
 ---
 
@@ -114,7 +114,7 @@ Containers virtualize at the operating system level. They share the host OS kern
    ```bash
    vagrant ssh
    ```
-   ![SSH Ubuntu VM](./images/Screenshot-5.png)
+   ![SSH to Ubuntu VM](./images/Screenshot-5.png)
     
 ---
 
@@ -134,8 +134,8 @@ sudo systemctl start nginx
 ```bash
 curl localhost
 ```
----
 ![Verify nginx](./images/Screenshot-7.png)
+
 
 ### **Step 6: Stop and Remove VM**
 
@@ -143,26 +143,28 @@ curl localhost
 vagrant halt
 vagrant destroy
 ```
-VM Cleanup
+![Stop VM](./images/Screenshot-8.png)
 
----
+
+
 
 ## **Experiment Setup – Part B: Containers using WSL (Windows)**
 
-### **Step 1: Install WSL 2**
+### **Step 1: Install WSL**
 
 ```powershell
 wsl --install
 ```
-
 Reboot the system after installation.
+
+---
 
 ### **Step 2: Install Ubuntu on WSL**
 
 ```powershell
 wsl --install -d Ubuntu
 ```
-[INSERT SCREENSHOT: Ubuntu installation on WSL]
+
 ---
 
 ### **Step 3: Install Docker Engine inside WSL**
@@ -173,19 +175,8 @@ sudo apt install -y docker.io
 sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
+![docker --version](./images/Screenshot-11.png)
 
-Logout and login again to apply group changes.
-
-Docker Installation in WSL
-[INSERT SCREENSHOT: Docker installation process]
-
-Docker Version Check
-
-
-[INSERT SCREENSHOT: docker --version output]
-
-
----
 
 ### **Step 4: Run Ubuntu Container with Nginx**
 
@@ -194,13 +185,8 @@ docker pull ubuntu
 
 docker run -d -p 8080:80 --name nginx-container nginx
 ```
-Docker Pull and Run
-
-[INSERT SCREENSHOT: Docker pull nginx and docker run command]
-
-Container Running Status
-
-[INSERT SCREENSHOT: docker ps showing nginx-container running]
+![Docker pull Ubuntu](./images/Screenshot-9.png)
+![Docker run Container](./images/Screenshot-10.png)
 
 ---
 
@@ -209,13 +195,8 @@ Container Running Status
 ```bash
 curl localhost:8080
 ```
-Nginx Verification in Container
+![Verify nginx in container](./images/Screenshot-12.png)
 
-```
-[INSERT SCREENSHOT: curl output showing Nginx welcome page from container]
-```
-
----
 
 ## **Resource Utilization Observation**
 
@@ -226,15 +207,9 @@ free -h
 htop
 systemd-analyze
 ```
-VM Resource Usage
+![free -h output](./images/Screenshot-13.png)
 
-[INSERT SCREENSHOT: free -h output in VM]
-
-VM Boot Time Analysis
-
-[INSERT SCREENSHOT: systemd-analyze output]
-
----
+![systemd-analyze output](./images/Screenshot-14.png)
 
 ### **Container Observation Commands**
 
@@ -244,15 +219,12 @@ free -h
 ```
 Container Resource Usage
 
-[INSERT SCREENSHOT: docker stats output]
+![docker stats output](./images/Screenshot-15.png)
 
-Host System Resource Usage
+![free -h output on host](./images/Screenshot-13.png)
 
-[INSERT SCREENSHOT: free -h output on host with container running]
 
----
-
-### **Parameters to Compare and Observations**
+### **Parameters to Compare**
 
 | Parameter    | Virtual Machine | Container |
 | ------------ | --------------- | --------- |
@@ -261,8 +233,6 @@ Host System Resource Usage
 | CPU Overhead | Higher          | Minimal   |
 | Disk Usage   | Larger          | Smaller   |
 | Isolation    | Strong          | Moderate  |
-
----
 
 ## **Result**
 
@@ -285,7 +255,3 @@ Container:
 Virtual Machines are suitable for full OS isolation and legacy workloads, whereas Containers are ideal for microservices, rapid deployment, and efficient resource utilization.
 
 ---
-
-
-
-
