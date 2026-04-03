@@ -2,9 +2,9 @@
 Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx.
 
 ---
-**Name:** Krrish Batra
-**SAP ID:** 500119657
-**Batch:** 2
+**Name:** Krrish Batra  
+**SAP ID:** 500119657  
+**Batch:** 2  
 **Specialisation:** Cloud Computing and Virtualization Technology
 ---
 
