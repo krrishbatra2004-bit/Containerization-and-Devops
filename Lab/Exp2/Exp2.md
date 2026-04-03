@@ -32,7 +32,7 @@ Check if Docker is properly installed:
 docker --version
 ```
 
-![Docker Version](./images/screenshot-1.png)
+![Docker Version](./Images/Screenshot-1.png)
 
 
 ---
@@ -47,7 +47,7 @@ Pull the official Nginx image from Docker Hub:
 docker pull nginx
 ```
 
-![Docker Pull Nginx](./images/screenshot-2.png)
+![Docker Pull Nginx](./Images/Screenshot-2.png)
 
 ---
 
@@ -56,7 +56,7 @@ Verify the image was downloaded:
 ```bash
 docker images
 ```
-![Docker Images](./images/screenshot-3.png)
+![Docker Images](./Images/Screenshot-3.png)
 
 
 ---
@@ -69,7 +69,7 @@ Run the nginx container in detached mode with port mapping:
 docker run -d -p 8080:80 nginx
 ```
 
-![Docker Run](./images/screenshot-4.png)
+![Docker Run](./Images/Screenshot-4.png)
 
 
 ---
@@ -82,7 +82,7 @@ Check if the container is running:
 docker ps
 ```
 
-![Docker PS](./images/screenshot-5.png)
+![Docker PS](./Images/Screenshot-5.png)
 
 
 ---
@@ -97,7 +97,7 @@ http://localhost:8080
 
 You should see the **"Welcome to nginx!"** page.
 
-![Nginx Browser](./images/screenshot-6.png)
+![Nginx Browser](./Images/Screenshot-6.png)
 
 
 ---
@@ -108,7 +108,7 @@ Alternatively, test using curl command:
 curl http://localhost:8080
 ```
 
-![Curl Test](./images/screenshot-7.png)
+![Curl Test](./Images/Screenshot-7.png)
 
 ---
 
@@ -130,7 +130,7 @@ Stop the running container:
 docker stop <container_id>
 ```
 
-![Docker Stop](./images/screenshot-8.png)
+![Docker Stop](./Images/Screenshot-8.png)
 
 
 ---
@@ -141,7 +141,7 @@ Verify the container is stopped:
 docker ps -a
 ```
 
-![Container Stopped](./images/screenshot-9.png)
+![Container Stopped](./Images/Screenshot-9.png)
 
 
 ---
@@ -154,7 +154,7 @@ Remove the stopped container:
 docker rm <container_id>
 ```
 
-![Docker RM](./images/screenshot-10.png)
+![Docker RM](./Images/Screenshot-10.png)
 
 
 ---
@@ -165,7 +165,7 @@ Verify container is removed:
 docker ps -a
 ```
 
-![Container Removed](./images/screenshot-11.png)
+![Container Removed](./Images/Screenshot-11.png)
 
 ---
 
@@ -175,8 +175,9 @@ Remove the nginx image from your system:
 
 ```bash
 docker rmi nginx
+```
 
-![Docker RMI](./images/screenshot-12.png)
+![Docker RMI](./Images/Screenshot-12.png)
 
 ---
 
@@ -186,7 +187,7 @@ Verify the image is removed:
 docker images
 ```
 
-![Image Removed](./images/screenshot-13.png)
+![Image Removed](./Images/Screenshot-13.png)
 
 ---
 
@@ -217,7 +218,7 @@ docker container prune
 docker image prune
 ```
 
-![Docker Stats](./images/screenshot-14.png)
+![Docker Stats](./Images/Screenshot-14.png)
 
 ---
 
@@ -260,19 +261,8 @@ This experiment demonstrated Docker containerization and basic container lifecyc
 - **Portable** - Same image runs anywhere Docker is installed
 
 **Use Cases:**
-- **Ideal for microservices** and scalable applications
+- **Ideal for microservices**
 - **Perfect for development** environments
 - **Great for CI/CD** pipelines
 - **Efficient for production** deployments
-
-### **Comparison with Virtual Machines:**
-
-| Aspect | Docker Containers | Virtual Machines |
-|--------|------------------|------------------|
-| **Startup Time** | < 1 second | 2-3 minutes |
-| **Memory** | 10-20MB | 850MB-2GB |
-| **Disk Space** | ~approx 187MB | ~approx 1.5-3GB |
-| **Isolation** | Process-level | Hardware-level |
-| **Resource Usage** | Minimal | High |
-| **Best For** | Microservices, Apps | Different OS, Strong isolation |
 
