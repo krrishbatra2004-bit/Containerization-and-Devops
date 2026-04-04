@@ -11,7 +11,7 @@
 | SAP ID | `500119657` |
 | ROLL NO | `R2142230486` |
 | BATCH | 2 |
-| SPECIALIZATION | CCVT |
+| SPECIALISATION | CCVT |
 | COURSE | CONTAINERIZATION AND DEVOPS |
 
 --- 
@@ -21,8 +21,9 @@
 
 | NO | EXPERIMENT | LINK |
 | :--- | :--- | :---: |
-| 01 |Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx | [REPORT](Lab/Exp1/Exp1.md) |
-| 02 |Docker Installation, Configuration, and Running Images | [REPORT](Lab/Exp2/Exp2.md) |
+| 01 | Comparison of Virtual Machines (VMs) and Containers using Ubuntu and Nginx | [REPORT](Lab/Exp1/Exp1.md) |
+| 02 | Docker Installation, Configuration, and Running Images | [REPORT](Lab/Exp2/Exp2.md) |
+| 03 | Deploying NGINX Using Different Base Images and Comparing Image Layers | [REPORT](Lab\Exp3\Exp3.md) |
 
 
 ---
