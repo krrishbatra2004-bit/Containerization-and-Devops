@@ -154,16 +154,6 @@ mkdir nginx-alpine && cd nginx-alpine
 nano Dockerfile
 ```
 
-```Dockerfile
-FROM alpine:latest
-
-RUN apk add --no-cache nginx
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-```
-
 ![Alpine Dockerfile](./Images/Screenshot-10.png)
 
 ---
@@ -237,10 +227,7 @@ echo "<h1>Hello from Docker NGINX</h1>" > html/index.html
 Run with volume mount:
 
 ```bash
-docker run -d \
-  -p 8083:80 \
-  -v $(pwd)/html:/usr/share/nginx/html \
-  nginx
+docker run -d -p 8083:80 -v "/mnt/c/Users/krris/OneDrive - UPES/SEM-6/Containerization and Devops/Containerization-and-Devops/html":/usr/share/nginx/html nginx
 ```
 
 ![Custom HTML](./Images/Screenshot-16.png)
@@ -254,45 +241,6 @@ curl http://localhost:8083
 ```
 
 ![Custom HTML Output](./Images/Screenshot-17.png)
-
----
-
-## **Additional Docker Commands**
-
-### **Useful Commands for Image and Layer Management**
-
-```bash
-# List all running containers
-docker ps
-
-# List all images with sizes
-docker images
-
-# Inspect full image metadata
-docker inspect nginx
-
-# View layer-by-layer history
-docker history <image_name>
-
-# Remove a specific container
-docker rm <container_id>
-
-# Remove a specific image
-docker rmi <image_name>
-
-# Remove all stopped containers
-docker container prune
-
-# Remove all unused images
-docker image prune
-
-# View real-time resource usage
-docker stats
-```
-
-![Docker Commands](./Images/Screenshot-18.png)
-
----
 
 ## **Observations**
 
@@ -332,22 +280,4 @@ The experiment successfully demonstrated:
 
 ## **Conclusion**
 
-This experiment demonstrated the impact of base image selection on Docker image size, layer count, security surface, and production suitability.
-
-### **Key Learnings:**
-
-**Base image choice matters:**
-- **Official Image** — Pre-optimized, reliable, best for standard production use
-- **Ubuntu Image** — Largest size, rich toolset, suited for debugging and learning
-- **Alpine Image** — Smallest size, minimal attack surface, ideal for microservices and CI/CD
-
-**NGINX in containers is:**
-- **Lightweight** — Alpine variant under 30 MB
-- **Versatile** — Works as web server, reverse proxy, and load balancer
-- **Fast** — Container startup in under 1 second
-- **Portable** — Same image runs anywhere Docker is installed
-
-**Use Cases:**
-- **Official image** — Standard web hosting and reverse proxy
-- **Ubuntu image** — Development, learning, and heavy debugging
-- **Alpine image** — Kubernetes workloads, CI/CD pipelines, microservices
+This experiment demonstrated the impact of base image selection on Docker image size, layer count, security surface,and production suitability.
