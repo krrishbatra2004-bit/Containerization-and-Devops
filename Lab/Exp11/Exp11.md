@@ -59,14 +59,14 @@ volumes:
 docker swarm init
 docker node ls 
 ```
-![Docker Swarm Initialization](images/image1.png)
+![Docker Swarm Initialization](Images/image1.png)
 
 ### Step 2: Deploy as a Stack
 In Swarm, we deploy groups of services as a **Stack**:
 ```bash
 docker stack deploy -c docker-compose.yml wpstack
 ```
-![Deploying Stack](images/image2.png)
+![Deploying Stack](Images/image2.png)
 
 ### Step 3: Verify the Deployment
 Check the status of your services and running tasks:
@@ -75,7 +75,7 @@ docker service ls                # List all services in the stack
 docker service ps wpstack_wordpress # View individual container status
 docker ps                        # View running containers
 ```
-![Verifying Services](images/image3.png)
+![Verifying Services](Images/image3.png)
 
 ### Step 4: Scaling the Application
 Scale the WordPress service to 3 replicas to handle more traffic:
@@ -83,7 +83,7 @@ Scale the WordPress service to 3 replicas to handle more traffic:
 docker service scale wpstack_wordpress=3
 docker service ls
 ```
-![Scaling Service](images/image4.png)
+![Scaling Service](Images/image4.png)
 
 ### Step 5: Test Self-Healing
 Simulate a failure by killing a running container and watch Swarm recreate it:
@@ -91,7 +91,7 @@ Simulate a failure by killing a running container and watch Swarm recreate it:
 docker kill <container_id>
 docker service ps wpstack_wordpress 
 ```
-![Self-Healing Test](images/image5.png)
+![Self-Healing Test](Images/image5.png)
 
 ### Step 6: Cleanup
 Remove the stack and all associated services/networks:
@@ -99,7 +99,7 @@ Remove the stack and all associated services/networks:
 docker stack rm wpstack
 docker swarm leave --force  
 ```
-![Cleanup](images/image6.png)
+![Cleanup](Images/image6.png)
 
 ---
 
