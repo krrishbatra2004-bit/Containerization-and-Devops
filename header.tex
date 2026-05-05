@@ -1,0 +1,37 @@
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{sectsty}
+\usepackage{titlesec}
+
+\definecolor{primary}{RGB}{0, 51, 102}
+\definecolor{secondary}{RGB}{102, 102, 102}
+
+\geometry{a4paper, margin=1in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{secondary}{Containerization and DevOps Lab Report}}
+\fancyhead[R]{\textcolor{secondary}{Page \thepage}}
+\fancyfoot[C]{\textcolor{secondary}{Krrish Batra - 500119657}}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\textcolor{secondary}{Containerization and DevOps Lab Report}}
+  \fancyhead[R]{\textcolor{secondary}{Page \thepage}}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\pretitle{\begin{center}\vspace{3cm}\Huge\bfseries\color{primary}}
+\posttitle{\end{center}}
+\preauthor{\begin{center}\large\color{secondary}}
+\postauthor{\end{center}}
+\predate{\begin{center}\large\color{secondary}}
+\postdate{\end{center}}
+
+\sectionfont{\color{primary}\sectionrule{0pt}{0pt}{-5pt}{0.8pt}}
+\subsectionfont{\color{primary}}
+\newcommand{\sectionbreak}{\clearpage}

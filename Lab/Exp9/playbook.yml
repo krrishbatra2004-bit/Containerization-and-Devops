@@ -1,0 +1,13 @@
+---
+
+- name: Configure multiple servers
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Create a custom test file
+      copy:
+        dest: /root/ansible_result.txt
+        content: "Provisioned by Ansible"
